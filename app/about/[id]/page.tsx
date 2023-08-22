@@ -1,6 +1,9 @@
+import Custom404 from "./404"
+
 const AboutById = ({params} : any) => {
+  
   return (
-    <div>About {params.id} page</div>
+    <div>{isNaN(parseFloat(params.id))? <Custom404 /> : `About ${params.id} page`}</div>
   )
 }
 
